@@ -1,15 +1,15 @@
 import queue
 import numpy as np
-import prettytable 
+import prettytable
+import logging 
 
 totalM = int(input("請輸入傳教士的人數: ")) # total Missionaries (right bank)  
 totalC = int(input("請輸入野人的人數: "))  # total cannibals (right bank) 
 while totalM < totalC:
     totalM = int(input("請再次輸入傳教士的人數: ")) # total Missionaries (right bank)  
     totalC = int(input("請再次輸入野人的人數: "))  # total cannibals (right bank) 
+
 costOrTime = int(input("cost輸入0, time輸入1: "))
-#totalM = 1 # the number of Missionaries  (right bank)
-#totalC = 1 # the number of cannibals  (right bank) 
 bAMax = 2 # Boat A maximum capacities: 2 persons
 bBMax = 3 # Boat B maximum capacities: 3 persons
 bACost = 3  # fare
@@ -18,8 +18,6 @@ bATime = 1
 bBTime = 1 
 bAPos = 1 # right bank: 1, left bank: -1
 bBPos = 1 # right bank: 1, left bank: -1
-#costOrTime = 0 #cost:0, time:1
-
 class Node:
     def __init__(self, m, c, bA_pos, bA_move, bA_m, bA_c, bB_pos, bB_move, bB_m, bB_c, step, cost, parent):
         self.state = np.array([m, c, bA_pos, bA_move, bB_pos, bB_move])
@@ -88,14 +86,6 @@ def boatB_actions (bBMax, bBcost, bBtime):
 boatA_operations = boatA_actions(2, bACost, bATime)
 boatB_operations = boatB_actions(3, bBCost, bBTime)
 
-def printNode(node): # print node information
-    print(f"right bank: m: {node.m}, c: {node.c}")
-    print(f"left bank:  m: {totalM - node.m}, c: {totalC - node.c}")
-    print(f"boat A: pos: {node.bA}, move: {node.bAMove}, m: {node.bA_m}, c: {node.bA_c}")
-    print(f"boat B: pos: {node.bB}, move: {node.bBMove}, m: {node.bB_m}, c: {node.bB_c}")
-    print(f"cost: {node.cost}, step: {node.step}\n")
-
-    
 def sortNode (dataList, cost_or_time):
     for i in range(len(dataList)):
         for j in range(i, len(dataList)):
@@ -103,6 +93,12 @@ def sortNode (dataList, cost_or_time):
                 temp = dataList[i]
                 dataList[i] = dataList[j]
                 dataList[j] = temp  
+def printNode(node): # print node information
+    print(f"right bank: m: {node.m}, c: {node.c}")
+    print(f"left bank:  m: {totalM - node.m}, c: {totalC - node.c}")
+    print(f"boat A: pos: {node.bA}, move: {node.bAMove}, m: {node.bA_m}, c: {node.bA_c}")
+    print(f"boat B: pos: {node.bB}, move: {node.bBMove}, m: {node.bB_m}, c: {node.bB_c}")
+    print(f"cost: {node.cost}, step: {node.step}\n")
 
 def get_all_children(curr_node, boatA_operations, boatB_operations):
     successor = []
@@ -241,6 +237,15 @@ def calculate_path(curr_node):
         result.append(parent_node)
         parent_node = parent_node.parent
     return result
+
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+def logging_file(open_list, close_list):
+    #logger.setLevel(logging.DEBUG)
+    for open_data in open_list:
+        logging.debug('open list: state[ m, c, bA_pos, bA_move, bB_pos, bB_move] = {}, boatA[m, c] = {}, boatB[m, c] = {}'.format(open_data.state, open_data.boatA, open_data.boatB))
+    for close_data in close_list:
+        logging.debug('close list: state[ m, c, bA_pos, bA_move, bB_pos, bB_move] = {}, boatA[m, c] = {}, boatB[m, c] = {}'.format(close_data.state, close_data.boatA, close_data.boatB))
         
 def uniform_cost_search(goal, start_node):
     
@@ -287,6 +292,7 @@ def uniform_cost_search(goal, start_node):
             if (sameNode_in_close_list != 1 and sameNode_in_open_list != 1):
                 open_list.append(child)
         sortNode(open_list, costOrTime)
+        logging_file(open_list, close_list)
         
 start_node = Node(totalM, totalC, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, None) # 初始狀態節點
 goal_node = [0, 0]
