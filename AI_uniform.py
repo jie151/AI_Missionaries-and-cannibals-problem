@@ -9,7 +9,7 @@ while totalM < totalC:
     totalM = int(input("請再次輸入傳教士的人數: ")) # total Missionaries (right bank)  
     totalC = int(input("請再次輸入野人的人數: "))  # total cannibals (right bank) 
 
-costOrStep = int(input("cost輸入0, time輸入1: "))
+costOrStep = int(input("cost輸入0, step輸入1: "))
 bAMax = 2 # Boat A maximum capacities: 2 persons
 bBMax = 3 # Boat B maximum capacities: 3 persons
 bACost = 3  # fare
