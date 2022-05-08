@@ -9,7 +9,7 @@ while totalM < totalC:
     totalM = int(input("請再次輸入傳教士的人數: ")) # total Missionaries (right bank)  
     totalC = int(input("請再次輸入野人的人數: "))  # total cannibals (right bank) 
 
-costOrStep = int(input("cost輸入0, time輸入1: "))
+costOrTime = int(input("cost輸入0, time輸入1: "))
 bAMax = 2 # Boat A maximum capacities: 2 persons
 bBMax = 3 # Boat B maximum capacities: 3 persons
 bACost = 3  # fare
@@ -199,7 +199,7 @@ def get_all_children(curr_node, boatA_operations, boatB_operations):
                             cost = curr_node.cost + bA_state[1] + bB_state[1]
                             successor.append(Node(right_m_bB_to_right, right_c_bB_to_right, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node))
     
-    sortNode (successor, costOrStep)
+    sortNode (successor, costOrTime)
 
     return successor
 
@@ -211,20 +211,20 @@ def printTable(dataList):
         if (node.bA == -1 and node.bAMove == 1):
             boatA_direction = "L <- R"
         elif(node.bA == -1 and node.bAMove == 0):
-            boatA_direction = "left (X)"
+            boatA_direction = "left (stay)"
         elif (node.bA == 1 and node.bAMove == 1):
             boatA_direction = "L -> R"
         else :
-            boatA_direction = "right (X)"
+            boatA_direction = "right (stay)"
 
         if (node.bB == -1 and node.bBMove == 1):
             boatB_direction = "L <- R"
         elif(node.bB == -1 and node.bBMove == 0):
-            boatB_direction = "left (X)"
+            boatB_direction = "left (stay)"
         elif (node.bB == 1 and node.bBMove == 1):
             boatB_direction = "L -> R"
         else :
-            boatB_direction = "right (X)"
+            boatB_direction = "right (stay)"
 
         table.add_row([node.step, totalM - node.m, totalC - node.c,boatA_direction, node.boatA, boatB_direction, node.boatB, node.m, node.c, node.cost])
     print(table)
@@ -238,22 +238,21 @@ def calculate_path(curr_node):
         parent_node = parent_node.parent
     return result
 
-logging.basicConfig(filename='UCS.log', level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s')
+#logger = logging.getLogger()
+#logger.setLevel(logging.DEBUG)
+logging.basicConfig(filename='UCS.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def logging_file(open_list, close_list):
-    logging.info('********open list********')
+    #logger.setLevel(logging.DEBUG)
     for open_data in open_list:
-        logging.debug('[rightM, rightC] = {}\n> boatA[pos, move, m, c] = {} {}\n> boatB[pos, move, m, c] ={} {}'.format(open_data.state[:2], open_data.state[2:4], open_data.boatA, open_data.state[4:], open_data.boatB))
-    logging.info('********close list********')
+        logging.debug('open list: state[ m, c, bA_pos, bA_move, bB_pos, bB_move] = {}, boatA[m, c] = {}, boatB[m, c] = {}'.format(open_data.state, open_data.boatA, open_data.boatB))
     for close_data in close_list:
-        logging.debug('[rightM, rightC] = {}\n> boatA[pos, move, m, c] = {} {}\n> boatB[pos, move, m, c] ={} {}'.format(close_data.state[:2], close_data.state[2:4], close_data.boatA, close_data.state[4:], close_data.boatB))
-    logging.info('--------------------------------------------------------------------------------------------------------')
+        logging.debug('close list: state[ m, c, bA_pos, bA_move, bB_pos, bB_move] = {}, boatA[m, c] = {}, boatB[m, c] = {}'.format(close_data.state, close_data.boatA, close_data.boatB))
         
 def uniform_cost_search(goal, start_node):
     
     priority_queue = queue.PriorityQueue()
-    priority_queue.put((start_node.data[costOrStep] , start_node))
+    priority_queue.put((start_node.data[costOrTime] , start_node))
     open_list = []
     close_list = []
     open_list.append(start_node)
@@ -268,6 +267,7 @@ def uniform_cost_search(goal, start_node):
 
         if (curr_node.m == goal[0] and curr_node.c == goal[1] ):
             result = calculate_path(curr_node)
+            print("find Goal!!!")
             print("****************")
             printTable(result)
             break
@@ -286,14 +286,14 @@ def uniform_cost_search(goal, start_node):
             for j in range(len(open_list)):
                 if np.array_equal(child.state, open_list[j].state):
                     sameNode_in_open_list = 1
-                    if child.data[costOrStep] < open_list[j].data[costOrStep]:
+                    if child.data[costOrTime] < open_list[j].data[costOrTime]:
                         open_list.pop(j)
                         open_list.append(i)
                     break
             
             if (sameNode_in_close_list != 1 and sameNode_in_open_list != 1):
                 open_list.append(child)
-        sortNode(open_list, costOrStep)
+        sortNode(open_list, costOrTime)
         logging_file(open_list, close_list)
         
 start_node = Node(totalM, totalC, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, None) # 初始狀態節點
