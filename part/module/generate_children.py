@@ -1,5 +1,5 @@
-from node import Node
-from sortNode import sortNode
+from .node import Node
+from .sortNode import sortNode
 import numpy as np
 
 
