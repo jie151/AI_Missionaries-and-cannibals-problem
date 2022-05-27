@@ -1,0 +1,18 @@
+2022-05-27 14:53:55,693 - INFO - ********open list********
+2022-05-27 14:53:55,694 - DEBUG - [rightM, rightC] = [0 0], f(n)= 33
+> boatA[pos, move, m, c] = [-1  1] [0 1]
+> boatB[pos, move, m, c] = [-1  1] [1 0]
+2022-05-27 14:53:55,694 - DEBUG - [rightM, rightC] = [0 1], f(n)= 6
+> boatA[pos, move, m, c] = [-1  1] [1 0]
+> boatB[pos, move, m, c] = [1 0] [0 0]
+2022-05-27 14:53:55,694 - DEBUG - [rightM, rightC] = [1 0], f(n)= 6
+> boatA[pos, move, m, c] = [-1  1] [0 1]
+> boatB[pos, move, m, c] = [1 0] [0 0]
+2022-05-27 14:53:55,694 - DEBUG - [rightM, rightC] = [0 0], f(n)= 5
+> boatA[pos, move, m, c] = [-1  1] [1 1]
+> boatB[pos, move, m, c] = [1 0] [0 0]
+2022-05-27 14:53:55,694 - INFO - ********close list********
+2022-05-27 14:53:55,694 - DEBUG - [rightM, rightC] = [1 1], f(n)= 2
+> boatA[pos, move, m, c] = [1 0] [0 0]
+> boatB[pos, move, m, c] = [1 0] [0 0]
+2022-05-27 14:53:55,694 - INFO - --------------------------------------------------------------------------------------------------------
