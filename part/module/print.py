@@ -10,6 +10,10 @@ def printNode(node, setting): # print node information
 def printTable(dataList, setting):
     table = prettytable.PrettyTable()
     table.field_names = ["step", "left m", "left c", "boatA DIR", "boatA [m c]", "boatB DIR", "boatB [m c]" , "right m", "right c", "cost", "AStar_h"]
+    if not dataList:
+        with open('table.txt', 'a') as w:
+            w.write("no Solution!!!")
+        return
     while dataList:
         node = dataList.pop()
         if (node.state['bA'] == -1 and node.state['bAMove'] == 1):
@@ -35,5 +39,4 @@ def printTable(dataList, setting):
                         node.state['m'], node.state['c'], node.data[0], node.h])
     with open('table.txt', 'a') as w:
         w.write(str(table))
-
     #print(table)
