@@ -1,25 +1,13 @@
-def boatA_actions (bAMax, bAcost, bAtime):
-    set_boatA_operation = [] 
-    for i in range (bAMax + 1):
+def boat_actions (id, boatSetting):
+    set_boat_operation = []
+    for i in range (boatSetting[id]['capacity'] + 1):
         if (i == 0): # 船上只有野人
-            for j in range(0, bAMax + 1):  
-                set_boatA_operation.append([i, j, bAcost, bAtime])
-        else: #船上有傳教士
-            for j in range (0, i + 1):
-                if i + j <= bAMax: 
-                    set_boatA_operation.append([i, j, bAcost, bAtime]) 
-    print("boatA所有動作為: ", set_boatA_operation)
-    return set_boatA_operation
+            for j in range(0, boatSetting[id]['capacity'] + 1):
+                set_boat_operation.append([i, j, boatSetting[id]['cost'], boatSetting[id]['step']])
 
-def boatB_actions (bBMax, bBcost, bBtime):
-    set_boatB_operation = [] 
-    for i in range (bBMax + 1):
-        if (i == 0): #船上只有野人
-            for j in range(0, bBMax + 1):
-                set_boatB_operation.append([i, j, bBcost, bBtime])
         else: #船上有傳教士
             for j in range (0, i + 1):
-                if i + j <= bBMax:
-                    set_boatB_operation.append([i, j, bBcost, bBtime])
-    print("boatB所有動作為: ", set_boatB_operation)
-    return set_boatB_operation
+                if i + j <= boatSetting[id]['capacity']:
+                    set_boat_operation.append([i, j, boatSetting[id]['cost'], boatSetting[id]['step'] ])
+    print(f"boat{id} 有{len(set_boat_operation)}種動作，各為:", set_boat_operation)
+    return set_boat_operation

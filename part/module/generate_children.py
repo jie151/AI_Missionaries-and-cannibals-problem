@@ -2,126 +2,85 @@ from .node import Node
 from .sortNode import sortNode
 import numpy as np
 
-def is_safe(totalM, totalC, right_m, right_c):
+def is_safe(right_m, right_c, left_m, left_c, setting):
     m = right_m
     c = right_c
-    leftM = totalM - m
-    leftC = totalC - c
-    if (totalM < totalC and totalM != 0):
+    total_m = right_m + left_m
+    total_c = right_c + left_c
+
+    if m < 0 or c < 0 or left_m < 0 or left_c < 0 or total_m != setting['totalM'] or total_c != setting['totalC']:
+        # the number of people cannot be less than 0
         return False
-    if (m < c and m!= 0): # cannibals <= missionaries  unless missionaries == 0 (right bank)
+
+    if m == total_m and c == total_c:
         return False
-    if (leftM < leftC) and leftM != 0: # cannibals <= missionaries  unless missionaries == 0 (left bank)
+
+    if (m < c and m!= 0) or ( (left_m < left_c) and left_m != 0):
+        # cannibals <= missionaries  unless missionaries == 0 (right/left bank)
         return False
-    if (m < 0 or c < 0 or leftM < 0 or leftC < 0): # the number of people cannot be less than 0
-        return False
-    if (m == 0 and leftM >= leftC):
-        return True
-    if (leftM == 0 and m >= c):
-        return True
-    if m >= c and leftM >= leftC:
+
+    if (m == 0 and left_m >= left_c) or (left_m == 0 and m >= c) or (m >= c and left_m >= left_c):
         return True
 
-def get_all_children(curr_node, boatA_operations, boatB_operations, setting_state):
+def get_all_children(curr_node, boatA_operations, boatB_operations, setting, boatSetting, useAStar):
     successor = []
-    right_m = curr_node.m
-    right_c = curr_node.c
-    totalM, totalC, costOrStep, bACost, bATime, bAMax, bBCost, bBTime, bBMax = setting_state
-    left_m = totalM - right_m
-    left_c = totalC - right_c
+    right_m = curr_node.state['m']
+    right_c = curr_node.state['c']
+    left_m = setting['totalM'] - right_m
+    left_c = setting['totalC'] - right_c
 
-    if (curr_node.bA > 0): # boat A on the right bank
-        for boatA_operation in boatA_operations:
-            bA_state = np.array([curr_node.bA, bACost, bATime, 1]) # 1: moving
-            right_m_bA_to_left = right_m - boatA_operation[0] # 右岸剩下的傳教士 = 右岸原本的傳教士人數 - boatA載的傳教士人數
-            right_c_bA_to_left = right_c - boatA_operation[1] # 右岸剩下的食人族 = 右岸原本的食人族人數 - boatA載的食人族人數
+    for boatA_operation in boatA_operations:
 
-            if (boatA_operation[0] + boatA_operation[1] == 0):
-                bA_state = [-curr_node.bA, 0, 0, 0] # bA_pos, bACost, bATime, bAmove
-            if is_safe(totalM, totalC, right_m_bA_to_left, right_c_bA_to_left):
+        if (boatA_operation[0] + boatA_operation[1] != 0):
+            bA_state = np.array([curr_node.state['bA'], boatSetting['A']['cost'], boatSetting['A']['step'], 1]) # 1: moving
+        else:
+            bA_state = [-curr_node.state['bA'], 0, 0, 0] # bA_pos, bACost, bATime, bAmove
 
-                if (curr_node.bB > 0):
-                # boat A : right bank, boat B: right bank
-                    for boatB_operation in boatB_operations:
-                        bB_state = np.array([curr_node.bB, bBCost, bBTime, 1]) # 1: moving
+        if curr_node.state['bA'] > 0:
+            # boat A on the right bank
+            boatA_m_to_left = boatA_operation[0]
+            boatA_c_to_left = boatA_operation[1]
+        else:
+            # boat A on the left bank
+            boatA_m_to_left = -boatA_operation[0]
+            boatA_c_to_left = -boatA_operation[1]
 
-                        right_m_bB_to_left = right_m_bA_to_left -  boatB_operation[0] # 右岸剩下的傳教士 (右岸剩下的傳教士人數 - boatB載的傳教士人數)
-                        right_c_bB_to_left = right_c_bA_to_left -  boatB_operation[1] # 右岸剩下的食人族 (右岸剩下的食人族人數 - boatB載的食人族人數)
+        right_m_bA = right_m - boatA_m_to_left # 右岸剩下的傳教士 = 右岸原本的傳教士人數 -/+ boatA載的傳教士人數
+        right_c_bA = right_c - boatA_c_to_left # 右岸剩下的食人族 = 右岸原本的食人族人數 -/+ boatA載的食人族人數
+        left_m_bA = left_m + boatA_m_to_left # 左岸剩下的傳教士 (左岸原本的傳教士人數 +/- boatA載的傳教士人數)
+        left_c_bA = left_c + boatA_c_to_left # 左岸剩下的食人族 (左岸原本的食人族人數 +/- boatA載的食人族人數)
 
-                        if (boatB_operation[0] + boatB_operation[1] == 0):
-                                bB_state = [-curr_node.bB, 0, 0, 0] # bB_pos, bBCost, bBTime, bBmove
+        if not is_safe(right_m_bA, right_c_bA, left_m_bA, left_c_bA, setting):
+            continue
 
-                        if is_safe(totalM, totalC, right_m_bB_to_left, right_c_bB_to_left) and not(bA_state[3] == 0 and bB_state[3] == 0):
+        for boatB_operation in boatB_operations:
 
-                            step = curr_node.step + bA_state[2] + bB_state[2] - min(bA_state[2], bB_state[2]) #原本已經走的step加上boat A, boat B的step 減掉他們重疊的step
-                            cost = curr_node.cost + bA_state[1] + bB_state[1]
-                            successor.append(Node(right_m_bB_to_left, right_c_bB_to_left, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node))
-                else:
-                # boat A : right bank, boat B: left bank
-                    for boatB_operation in boatB_operations:
-                        bB_state = np.array([curr_node.bB, bBCost, bBTime, 1]) #1: moving
+            if (boatB_operation[0] + boatB_operation[1] != 0):
+                bB_state = np.array([curr_node.state['bB'], boatSetting['B']['cost'], boatSetting['B']['step'], 1]) # 1: moving
+            else :
+                bB_state = [-curr_node.state['bB'], 0, 0, 0] # bB_pos, bBCost, bBTime, bBmove
 
-                        left_m_bB_to_right_no = left_m - boatB_operation[0] # 左岸剩下的傳教士 (左岸原本的傳教士人數 - boatB載的傳教士人數)
-                        left_c_bB_to_right_no = left_c - boatB_operation[1] # 左岸剩下的食人族 (左岸原本的食人族人數 - boatB載的食人族人數)
-                        right_m_bB_to_right_no = right_m_bA_to_left + boatB_operation[0] # 右岸所有的傳教士 (右岸原本的傳教士人數 + boatB載的傳教士人數)
-                        right_c_bB_to_right_no = right_c_bA_to_left + boatB_operation[1] # 右岸所有的食人族 (右岸原本的食人族人數 + boatB載的食人族人數)
+            if curr_node.state['bB'] > 0:
+            # boat B on the right bank
+                boatB_m_to_left = boatB_operation[0]
+                boatB_c_to_left = boatB_operation[1]
+            else:
+                # boat B on the left bank
+                boatB_m_to_left = -boatB_operation[0]
+                boatB_c_to_left = -boatB_operation[1]
 
-                        if (boatB_operation[0] + boatB_operation[1] == 0):
-                                bB_state = [-curr_node.bB, 0, 0, 0] #bB_pos, bBCost, bBTime, bBmove
+            right_m_bB = right_m_bA - boatB_m_to_left # 右岸剩下的傳教士 (右岸剩下的傳教士人數 -/+ boatB載的傳教士人數)
+            right_c_bB = right_c_bA - boatB_c_to_left # 右岸剩下的食人族 (右岸剩下的食人族人數 -/+ boatB載的食人族人數)
+            left_m_bB = left_m_bA + boatB_m_to_left # 左岸剩下的傳教士 (左岸原本的傳教士人數 +/- boatB載的傳教士人數)
+            left_c_bB = left_c_bA + boatB_c_to_left # 左岸剩下的食人族 (左岸原本的食人族人數 +/- boatB載的食人族人數)
 
-                        if is_safe(totalM, totalC, right_m_bB_to_right_no,  right_c_bB_to_right_no) and not(bA_state[3] == 0 and bB_state[3] == 0) and left_m_bB_to_right_no >= 0 and left_c_bB_to_right_no >= 0:
+            if is_safe(right_m_bB, right_c_bB, left_m_bB, left_c_bB, setting) and not(bA_state[3] == 0 and bB_state[3] == 0):
 
-                            step = curr_node.step + bA_state[2] + bB_state[2] - min(bA_state[2], bB_state[2]) #原本已經走的step加上boat A, boat B的step 減掉他們重疊的step
-                            cost = curr_node.cost + bA_state[1] + bB_state[1]
-                            successor.append(Node(right_m_bB_to_right_no,  right_c_bB_to_right_no, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node))
+                step = curr_node.data[1] + bA_state[2] + bB_state[2] - min(bA_state[2], bB_state[2]) #原本已經走的step加上boat A, boat B的step 減掉他們重疊的step
+                cost = curr_node.data[0] + bA_state[1] + bB_state[1]
+                successor.append(Node(right_m_bB, right_c_bB, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node, setting, boatSetting))
 
-    else : #boat A on the left bank
-        for boatA_operation in boatA_operations:
-            bA_state = np.array([curr_node.bA, bACost, bATime, 1]) #1: moving
-            left_m_bA_to_right = left_m - boatA_operation[0] # 左岸剩下的傳教士 (左岸原本的傳教士人數 - boatA載的傳教士人數)
-            left_c_bA_to_right = left_c - boatA_operation[1] # 左岸剩下的食人族 (左岸原本的食人族人數 - boatA載的食人族人數)
-            right_m_bA_to_right = right_m + boatA_operation[0] # 右岸所有的傳教士 (右岸原本的傳教士人數 + boatA載的傳教士人數)
-            right_c_bA_to_right = right_c + boatA_operation[1] # 右岸所有的食人族 (右岸原本的食人族人數 + boatA載的食人族人數)
-            if (boatA_operation[0] + boatA_operation[1] == 0):
-                bA_state = [-curr_node.bA, 0, 0, 0] # bA_pos, bACost, bATime, bAmove
-
-            if is_safe(totalM, totalC, right_m_bA_to_right, right_c_bA_to_right) and left_m_bA_to_right + right_m_bA_to_right == totalM and left_c_bA_to_right + right_c_bA_to_right == totalC:
-
-                if (curr_node.bB > 0):
-                # boat A : left bank, boat B: right bank
-                    for boatB_operation in boatB_operations:
-                        bB_state = np.array([curr_node.bB, bBCost, bBTime, 1]) #1: moving
-
-                        left_m_bB_to_left_no = left_m_bA_to_right + boatB_operation[0] # 左岸所有的傳教士 (左岸原本的傳教士人數 + boatB載的傳教士人數)
-                        left_c_bB_to_left_no = left_c_bA_to_right + boatB_operation[1] # 左岸所有的食人族 (左岸原本的食人族人數 + boatB載的食人族人數)
-                        right_m_bB_to_left_no = totalM - left_m_bB_to_left_no # 右岸剩下的傳教士 (右岸total會有的傳教士人數 - 左岸所有的傳教士) 避免算到A船載過去的人
-                        right_c_bB_to_left_no = totalC - left_c_bB_to_left_no # 右岸剩下的食人族 (右岸total會有的食人族人數 - 左岸所有的食人族) 避免算到A船載過去的人
-
-                        if (boatB_operation[0] + boatB_operation[1] == 0):
-                                bB_state = [-curr_node.bB, 0, 0, 0] # bB_pos, bBCost, bBTime, bBmove
-
-                        if is_safe(totalM, totalC, right_m_bB_to_left_no,  right_c_bB_to_left_no) and not(bA_state[3] == 0 and bB_state[3] == 0) and right_m - boatB_operation[0] >= 0 and right_c - boatB_operation[1] >= 0 :
-
-                            step = curr_node.step + bA_state[2] + bB_state[2] - min(bA_state[2], bB_state[2]) # 原本已經走的step加上boat A, boat B的step 減掉他們重疊的step
-                            cost = curr_node.cost + bA_state[1] + bB_state[1]
-                            successor.append(Node(right_m_bB_to_left_no, right_c_bB_to_left_no, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node))
-                else:
-                # boat A : left bank, boat B: left bank
-                    for boatB_operation in boatB_operations:
-                        bB_state = np.array([curr_node.bB, bBCost, bBTime, 1]) #1: moving
-
-                        right_m_bB_to_right = right_m_bA_to_right + boatB_operation[0] # 右岸所有的傳教士 (右岸原本的傳教士人數 + boatB載的傳教士人數)
-                        right_c_bB_to_right = right_c_bA_to_right + boatB_operation[1] # 右岸所有的食人族 (右岸原本的食人族人數 + boatB載的食人族人數)
-
-                        if (boatB_operation[0] + boatB_operation[1] == 0):
-                                bB_state = [-curr_node.bB, 0, 0, 0] # bB_pos, bBCost, bBTime, bBmove
-
-                        if is_safe(totalM, totalC, right_m_bB_to_right, right_c_bB_to_right) and not(bA_state[3] == 0 and bB_state[3] == 0):
-
-                            step = curr_node.step + bA_state[2] + bB_state[2] - min(bA_state[2], bB_state[2]) # 原本已經走的step加上boat A, boat B的step 減掉他們重疊的step
-                            cost = curr_node.cost + bA_state[1] + bB_state[1]
-                            successor.append(Node(right_m_bB_to_right, right_c_bB_to_right, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node))
-
-    sortNode (successor, costOrStep)
-
+    sortNode (successor, setting['costOrStep'], useAStar)
+    #for node in successor:
+    #    printNode(node, setting)
     return successor
