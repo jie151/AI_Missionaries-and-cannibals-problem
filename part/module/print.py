@@ -34,6 +34,6 @@ def printTable(dataList, setting):
         table.add_row([ node.data[1], setting['totalM'] - node.state['m'], setting['totalC'] - node.state['c'],
                         boatA_direction, list(node.boatA.values()), boatB_direction, list(node.boatB.values()),
                         node.state['m'], node.state['c'], node.data[0], node.h])
-    with open('table.txt', 'a') as w:
+    with open('result.txt', 'a') as w:
         w.write(str(table))
     print(table)
