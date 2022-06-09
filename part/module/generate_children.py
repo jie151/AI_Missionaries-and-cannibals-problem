@@ -22,7 +22,7 @@ def is_safe(right_m, right_c, left_m, left_c, setting):
     if (m == 0 and left_m >= left_c) or (left_m == 0 and m >= c) or (m >= c and left_m >= left_c):
         return True
 
-def get_all_children(curr_node, boatA_operations, boatB_operations, setting, boatSetting, useAStar):
+def get_all_children(curr_node, boatA_operations, boatB_operations, setting, boatSetting, useAStar, limit):
     successor = []
     right_m = curr_node.state['m']
     right_c = curr_node.state['c']
@@ -78,7 +78,8 @@ def get_all_children(curr_node, boatA_operations, boatB_operations, setting, boa
 
                 step = curr_node.data[1] + bA_state[2] + bB_state[2] - min(bA_state[2], bB_state[2]) #原本已經走的step加上boat A, boat B的step 減掉他們重疊的step
                 cost = curr_node.data[0] + bA_state[1] + bB_state[1]
-                successor.append(Node(right_m_bB, right_c_bB, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node, setting, boatSetting))
+                if (step <= limit['step']['max']  and cost <= limit['cost']['max']):
+                    successor.append(Node(right_m_bB, right_c_bB, -bA_state[0], bA_state[3], boatA_operation[0], boatA_operation[1], -bB_state[0], bB_state[3], boatB_operation[0], boatB_operation[1], step, cost, curr_node, setting, boatSetting))
 
     sortNode (successor, setting['costOrStep'], useAStar)
     #for node in successor:

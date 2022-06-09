@@ -9,5 +9,5 @@ def boat_actions (id, boatSetting):
             for j in range (0, i + 1):
                 if i + j <= boatSetting[id]['capacity']:
                     set_boat_operation.append([i, j, boatSetting[id]['cost'], boatSetting[id]['step'] ])
-    print(f"boat{id} 有{len(set_boat_operation)}種動作，各為:", set_boat_operation)
+    print(f"boat{id} 有{len(set_boat_operation)}種動作，各為: {set_boat_operation}\n")
     return set_boat_operation

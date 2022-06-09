@@ -16,7 +16,7 @@ totalM: 3, totalC: 3, costOrStep: 0
 |  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
 |  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 41, count_close: 22, open+close: 63, AStar exe time : 0.016
+count_open: 41, count_close: 22, open+close: 63, AStar exe time : 0.018
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -34,7 +34,7 @@ count_open: 41, count_close: 22, open+close: 63, AStar exe time : 0.016
 |  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
 |  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139, UCS exe time: 0.072
+count_open: 86, count_close: 53, open+close: 139, UCS exe time: 0.069
 
 ******************
 totalM: 3, totalC: 3, costOrStep: 1
@@ -46,7 +46,7 @@ totalM: 3, totalC: 3, costOrStep: 1
 |  2   |   0    |   1    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
 |  3   |   3    |   3    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 3, 0]  |    0    |    0    |  34  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 21, count_close: 3, open+close: 24, AStar exe time : 0.005
+count_open: 21, count_close: 3, open+close: 24, AStar exe time : 0.004
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -87,7 +87,7 @@ count_open: 59, count_close: 30, open+close: 89, AStar exe time : 0.018
 |  6   |   3    |   3    |   L -> R   |  [1, 0, 1]  |   L <- R   |  [1, 3, 0]  |    1    |    1    |  43  |    3    |
 |  7   |   4    |   4    |   L <- R   |  [1, 1, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    0    |  46  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 141, count_close: 85, open+close: 226, UCS exe time: 0.168
+count_open: 141, count_close: 85, open+close: 226, UCS exe time: 0.138
 
 ******************
 totalM: 4, totalC: 4, costOrStep: 1
@@ -100,7 +100,7 @@ totalM: 4, totalC: 4, costOrStep: 1
 |  3   |   4    |   1    |   L <- R   |  [1, 2, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    3    |  59  |    2    |
 |  4   |   4    |   4    |   L (X)    |  [0, 0, 0]  |   L <- R   |  [1, 0, 3]  |    0    |    0    |  84  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 34, count_close: 5, open+close: 39, AStar exe time : 0.005
+count_open: 34, count_close: 5, open+close: 39, AStar exe time : 0.006
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -111,7 +111,7 @@ count_open: 34, count_close: 5, open+close: 39, AStar exe time : 0.005
 |  3   |   4    |   1    |   L <- R   |  [1, 0, 2]  |   L -> R   |  [1, 0, 1]  |    0    |    3    |  59  |    2    |
 |  4   |   4    |   4    |   L (X)    |  [0, 0, 0]  |   L <- R   |  [1, 0, 3]  |    0    |    0    |  84  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 89, count_close: 58, open+close: 147, UCS exe time: 0.088
+count_open: 89, count_close: 58, open+close: 147, UCS exe time: 0.089
 
 ******************
 totalM: 5, totalC: 5, costOrStep: 0
@@ -132,7 +132,7 @@ totalM: 5, totalC: 5, costOrStep: 0
 |  11  |   5    |   3    |   L -> R   |  [1, 0, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    2    |  55  |    0    |
 |  12  |   5    |   5    |   L <- R   |  [1, 0, 2]  |   L (X)    |  [0, 0, 0]  |    0    |    0    |  58  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 68, count_close: 38, open+close: 106, AStar exe time : 0.025
+count_open: 68, count_close: 38, open+close: 106, AStar exe time : 0.024
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -150,7 +150,7 @@ count_open: 68, count_close: 38, open+close: 106, AStar exe time : 0.025
 |  10  |   4    |   4    |   L -> R   |  [1, 1, 0]  |   L (X)    |  [0, 0, 0]  |    1    |    1    |  55  |    0    |
 |  11  |   5    |   5    |   L <- R   |  [1, 1, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    0    |  58  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 215, count_close: 136, open+close: 351, UCS exe time: 0.307
+count_open: 215, count_close: 136, open+close: 351, UCS exe time: 0.323
 
 ******************
 totalM: 5, totalC: 5, costOrStep: 1
@@ -165,7 +165,7 @@ totalM: 5, totalC: 5, costOrStep: 1
 |  5   |   5    |   2    |   L <- R   |  [1, 2, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    3    | 115  |    2    |
 |  6   |   5    |   5    |   L (X)    |  [0, 0, 0]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 140  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 59, count_close: 19, open+close: 78, AStar exe time : 0.018
+count_open: 59, count_close: 19, open+close: 78, AStar exe time : 0.019
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -177,7 +177,7 @@ count_open: 59, count_close: 19, open+close: 78, AStar exe time : 0.018
 |  4   |   5    |   2    |   L <- R   |  [1, 2, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    3    | 109  |    2    |
 |  5   |   5    |   5    |   L (X)    |  [0, 0, 0]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 134  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 135, count_close: 98, open+close: 233, UCS exe time: 0.203
+count_open: 135, count_close: 98, open+close: 233, UCS exe time: 0.215
 
 ******************
 totalM: 6, totalC: 6, costOrStep: 0
@@ -201,7 +201,7 @@ totalM: 6, totalC: 6, costOrStep: 0
 |  14  |   6    |   4    |   L -> R   |  [1, 0, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    2    | 111  |    0    |
 |  15  |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L (X)    |  [0, 0, 0]  |    0    |    0    | 114  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 84, count_close: 47, open+close: 131, AStar exe time : 0.031
+count_open: 84, count_close: 47, open+close: 131, AStar exe time : 0.032
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -222,7 +222,7 @@ count_open: 84, count_close: 47, open+close: 131, AStar exe time : 0.031
 |  13  |   6    |   4    |   L -> R   |  [1, 0, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    2    | 111  |    0    |
 |  14  |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L (X)    |  [0, 0, 0]  |    0    |    0    | 114  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 420, count_close: 265, open+close: 685, UCS exe time: 0.976
+count_open: 420, count_close: 265, open+close: 685, UCS exe time: 0.981
 
 ******************
 totalM: 6, totalC: 6, costOrStep: 1
@@ -253,7 +253,7 @@ count_open: 89, count_close: 48, open+close: 137, AStar exe time : 0.04
 |  6   |   6    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 162  |    0    |
 |  7   |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 190  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 218, count_close: 171, open+close: 389, UCS exe time: 0.556
+count_open: 218, count_close: 171, open+close: 389, UCS exe time: 0.542
 
 ******************
 totalM: 7, totalC: 7, costOrStep: 0
@@ -261,7 +261,7 @@ totalM: 7, totalC: 7, costOrStep: 0
 count_open: 58, count_close: 39, open+close: 97, AStar exe time : 0.021
 
 
-count_open: 3954, count_close: 2607, open+close: 6561, UCS exe time: 90.053
+count_open: 4395, count_close: 2972, open+close: 7367, UCS exe time: 104.34
 
 ******************
 totalM: 7, totalC: 7, costOrStep: 1
@@ -269,55 +269,55 @@ totalM: 7, totalC: 7, costOrStep: 1
 count_open: 87, count_close: 66, open+close: 153, AStar exe time : 0.053
 
 
-count_open: 1228, count_close: 1228, open+close: 2456, UCS exe time: 18.807
+count_open: 1228, count_close: 1228, open+close: 2456, UCS exe time: 18.99
 
 ******************
 totalM: 8, totalC: 8, costOrStep: 0
 
-count_open: 65, count_close: 43, open+close: 108, AStar exe time : 0.029
+count_open: 65, count_close: 43, open+close: 108, AStar exe time : 0.031
 
 
-count_open: 3941, count_close: 2516, open+close: 6457, UCS exe time: 90.046
+count_open: 4352, count_close: 2785, open+close: 7137, UCS exe time: 120.016
 
 ******************
 totalM: 8, totalC: 8, costOrStep: 1
 
-count_open: 96, count_close: 72, open+close: 168, AStar exe time : 0.063
+count_open: 96, count_close: 72, open+close: 168, AStar exe time : 0.077
 
 
-count_open: 1721, count_close: 1721, open+close: 3442, UCS exe time: 34.708
+count_open: 1721, count_close: 1721, open+close: 3442, UCS exe time: 38.737
 
 ******************
 totalM: 9, totalC: 9, costOrStep: 0
 
-count_open: 72, count_close: 47, open+close: 119, AStar exe time : 0.031
+count_open: 72, count_close: 47, open+close: 119, AStar exe time : 0.042
 
 
-count_open: 3811, count_close: 2494, open+close: 6305, UCS exe time: 90.039
+count_open: 4213, count_close: 2753, open+close: 6966, UCS exe time: 120.071
 
 ******************
 totalM: 9, totalC: 9, costOrStep: 1
 
-count_open: 111, count_close: 83, open+close: 194, AStar exe time : 0.09
+count_open: 111, count_close: 83, open+close: 194, AStar exe time : 0.085
 
 
-count_open: 1871, count_close: 1871, open+close: 3742, UCS exe time: 47.687
+count_open: 1871, count_close: 1871, open+close: 3742, UCS exe time: 43.536
 
 ******************
 totalM: 10, totalC: 10, costOrStep: 0
 
-count_open: 79, count_close: 51, open+close: 130, AStar exe time : 0.046
+count_open: 79, count_close: 51, open+close: 130, AStar exe time : 0.038
 
 
-count_open: 3675, count_close: 2400, open+close: 6075, UCS exe time: 90.005
+count_open: 4335, count_close: 2835, open+close: 7170, UCS exe time: 120.079
 
 ******************
 totalM: 10, totalC: 10, costOrStep: 1
 
-count_open: 120, count_close: 90, open+close: 210, AStar exe time : 0.096
+count_open: 120, count_close: 90, open+close: 210, AStar exe time : 0.101
 
 
-count_open: 2069, count_close: 2069, open+close: 4138, UCS exe time: 55.95
+count_open: 2069, count_close: 2069, open+close: 4138, UCS exe time: 57.457
 
 ******************
 totalM: 4, totalC: 3, costOrStep: 0
@@ -337,7 +337,7 @@ totalM: 4, totalC: 3, costOrStep: 0
 |  10  |   4    |   1    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  30  |    0    |
 |  11  |   4    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 61, count_close: 26, open+close: 87, AStar exe time : 0.028
+count_open: 61, count_close: 26, open+close: 87, AStar exe time : 0.031
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -355,7 +355,7 @@ count_open: 61, count_close: 26, open+close: 87, AStar exe time : 0.028
 |  10  |   3    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
 |  11  |   4    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 115, count_close: 73, open+close: 188, UCS exe time: 0.184
+count_open: 115, count_close: 73, open+close: 188, UCS exe time: 0.194
 
 ******************
 totalM: 4, totalC: 3, costOrStep: 1
@@ -368,7 +368,7 @@ totalM: 4, totalC: 3, costOrStep: 1
 |  3   |   2    |   1    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    2    |    2    |  56  |    1    |
 |  4   |   4    |   3    |   L <- R   |  [1, 0, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    |  84  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 53, count_close: 8, open+close: 61, AStar exe time : 0.013
+count_open: 53, count_close: 8, open+close: 61, AStar exe time : 0.015
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -378,7 +378,7 @@ count_open: 53, count_close: 8, open+close: 61, AStar exe time : 0.013
 |  2   |   2    |   2    |   L (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 0]  |    2    |    1    |  53  |    0    |
 |  3   |   4    |   3    |   L (X)    |  [0, 0, 0]  |   L <- R   |  [1, 2, 1]  |    0    |    0    |  78  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 84, count_close: 49, open+close: 133, UCS exe time: 0.108
+count_open: 84, count_close: 49, open+close: 133, UCS exe time: 0.121
 
 ******************
 totalM: 5, totalC: 4, costOrStep: 0
@@ -402,7 +402,7 @@ totalM: 5, totalC: 4, costOrStep: 0
 |  14  |   4    |   3    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  42  |    0    |
 |  15  |   5    |   4    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  45  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 89, count_close: 52, open+close: 141, AStar exe time : 0.071
+count_open: 89, count_close: 52, open+close: 141, AStar exe time : 0.07
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -424,7 +424,7 @@ count_open: 89, count_close: 52, open+close: 141, AStar exe time : 0.071
 |  14  |   4    |   3    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  42  |    0    |
 |  15  |   5    |   4    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  45  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 265, count_close: 153, open+close: 418, UCS exe time: 0.728
+count_open: 265, count_close: 153, open+close: 418, UCS exe time: 0.776
 
 ******************
 totalM: 5, totalC: 4, costOrStep: 1
@@ -438,7 +438,7 @@ totalM: 5, totalC: 4, costOrStep: 1
 |  4   |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  62  |    3    |
 |  5   |   5    |   4    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    |  90  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 55, count_close: 10, open+close: 65, AStar exe time : 0.017
+count_open: 55, count_close: 10, open+close: 65, AStar exe time : 0.016
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -450,7 +450,7 @@ count_open: 55, count_close: 10, open+close: 65, AStar exe time : 0.017
 |  4   |   2    |   2    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    3    |    2    |  62  |    0    |
 |  5   |   5    |   4    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    |  90  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 163, count_close: 117, open+close: 280, UCS exe time: 0.49
+count_open: 163, count_close: 117, open+close: 280, UCS exe time: 0.477
 
 ******************
 totalM: 6, totalC: 5, costOrStep: 0
@@ -478,7 +478,7 @@ totalM: 6, totalC: 5, costOrStep: 0
 |  18  |   5    |   4    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  54  |    0    |
 |  19  |   6    |   5    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  57  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 116, count_close: 66, open+close: 182, AStar exe time : 0.093
+count_open: 116, count_close: 66, open+close: 182, AStar exe time : 0.086
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -504,7 +504,7 @@ count_open: 116, count_close: 66, open+close: 182, AStar exe time : 0.093
 |  18  |   5    |   4    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  54  |    0    |
 |  19  |   6    |   5    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  57  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 462, count_close: 260, open+close: 722, UCS exe time: 1.96
+count_open: 462, count_close: 260, open+close: 722, UCS exe time: 1.828
 
 ******************
 totalM: 6, totalC: 5, costOrStep: 1
@@ -519,7 +519,7 @@ totalM: 6, totalC: 5, costOrStep: 1
 |  5   |   3    |   3    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 112  |    2    |
 |  6   |   6    |   5    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 140  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 75, count_close: 15, open+close: 90, AStar exe time : 0.025
+count_open: 75, count_close: 15, open+close: 90, AStar exe time : 0.03
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -531,7 +531,7 @@ count_open: 75, count_close: 15, open+close: 90, AStar exe time : 0.025
 |  4   |   6    |   0    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 112  |    0    |
 |  5   |   6    |   5    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 140  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 206, count_close: 149, open+close: 355, UCS exe time: 0.72
+count_open: 206, count_close: 149, open+close: 355, UCS exe time: 0.7
 
 ******************
 totalM: 7, totalC: 6, costOrStep: 0
@@ -593,7 +593,7 @@ count_open: 139, count_close: 78, open+close: 217, AStar exe time : 0.121
 |  22  |   6    |   5    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  66  |    0    |
 |  23  |   7    |   6    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  69  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 636, count_close: 366, open+close: 1002, UCS exe time: 3.393
+count_open: 636, count_close: 366, open+close: 1002, UCS exe time: 3.533
 
 ******************
 totalM: 7, totalC: 6, costOrStep: 1
@@ -610,7 +610,7 @@ totalM: 7, totalC: 6, costOrStep: 1
 |  7   |   7    |   2    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    4    | 168  |    1    |
 |  8   |   7    |   6    |   L <- R   |  [1, 0, 1]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 196  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 99, count_close: 20, open+close: 119, AStar exe time : 0.044
+count_open: 99, count_close: 20, open+close: 119, AStar exe time : 0.045
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -624,7 +624,7 @@ count_open: 99, count_close: 20, open+close: 119, AStar exe time : 0.044
 |  6   |   7    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 162  |    0    |
 |  7   |   7    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 190  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 332, count_close: 263, open+close: 595, UCS exe time: 2.111
+count_open: 332, count_close: 263, open+close: 595, UCS exe time: 2.108
 
 ******************
 totalM: 8, totalC: 7, costOrStep: 0
@@ -660,7 +660,7 @@ totalM: 8, totalC: 7, costOrStep: 0
 |  26  |   7    |   6    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  78  |    0    |
 |  27  |   8    |   7    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  81  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 162, count_close: 90, open+close: 252, AStar exe time : 0.148
+count_open: 162, count_close: 90, open+close: 252, AStar exe time : 0.151
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -694,7 +694,7 @@ count_open: 162, count_close: 90, open+close: 252, AStar exe time : 0.148
 |  26  |   7    |   6    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  78  |    0    |
 |  27  |   8    |   7    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  81  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 845, count_close: 486, open+close: 1331, UCS exe time: 6.061
+count_open: 845, count_close: 486, open+close: 1331, UCS exe time: 5.412
 
 ******************
 totalM: 8, totalC: 7, costOrStep: 1
@@ -713,7 +713,7 @@ totalM: 8, totalC: 7, costOrStep: 1
 |  9   |   5    |   5    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    | 174  |    3    |
 |  10  |   8    |   7    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 202  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 115, count_close: 37, open+close: 152, AStar exe time : 0.079
+count_open: 115, count_close: 37, open+close: 152, AStar exe time : 0.068
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -729,7 +729,7 @@ count_open: 115, count_close: 37, open+close: 152, AStar exe time : 0.079
 |  8   |   8    |   2    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 174  |    0    |
 |  9   |   8    |   7    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 202  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 458, count_close: 368, open+close: 826, UCS exe time: 4.161
+count_open: 458, count_close: 368, open+close: 826, UCS exe time: 3.506
 
 ******************
 totalM: 9, totalC: 8, costOrStep: 0
@@ -769,7 +769,7 @@ totalM: 9, totalC: 8, costOrStep: 0
 |  30  |   9    |   6    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  90  |    0    |
 |  31  |   9    |   8    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  93  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 184, count_close: 102, open+close: 286, AStar exe time : 0.202
+count_open: 184, count_close: 102, open+close: 286, AStar exe time : 0.178
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -807,7 +807,7 @@ count_open: 184, count_close: 102, open+close: 286, AStar exe time : 0.202
 |  30  |   9    |   6    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  90  |    0    |
 |  31  |   9    |   8    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  93  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1155, count_close: 652, open+close: 1807, UCS exe time: 10.001
+count_open: 1155, count_close: 652, open+close: 1807, UCS exe time: 9.774
 
 ******************
 totalM: 9, totalC: 8, costOrStep: 1
@@ -827,7 +827,7 @@ totalM: 9, totalC: 8, costOrStep: 1
 |  10  |   6    |   6    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 224  |    2    |
 |  11  |   9    |   8    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 252  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 125, count_close: 39, open+close: 164, AStar exe time : 0.079
+count_open: 125, count_close: 39, open+close: 164, AStar exe time : 0.075
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -844,7 +844,7 @@ count_open: 125, count_close: 39, open+close: 164, AStar exe time : 0.079
 |  9   |   9    |   3    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 224  |    0    |
 |  10  |   9    |   8    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 252  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 572, count_close: 471, open+close: 1043, UCS exe time: 5.828
+count_open: 572, count_close: 471, open+close: 1043, UCS exe time: 5.602
 
 ******************
 totalM: 10, totalC: 9, costOrStep: 0
@@ -888,7 +888,7 @@ totalM: 10, totalC: 9, costOrStep: 0
 |  34  |   10   |   7    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    | 102  |    0    |
 |  35  |   10   |   9    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 105  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 205, count_close: 114, open+close: 319, AStar exe time : 0.203
+count_open: 205, count_close: 114, open+close: 319, AStar exe time : 0.206
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -930,7 +930,7 @@ count_open: 205, count_close: 114, open+close: 319, AStar exe time : 0.203
 |  34  |   9    |   8    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    | 102  |    0    |
 |  35  |   10   |   9    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 105  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1472, count_close: 836, open+close: 2308, UCS exe time: 16.105
+count_open: 1472, count_close: 836, open+close: 2308, UCS exe time: 16.664
 
 ******************
 totalM: 10, totalC: 9, costOrStep: 1
@@ -952,7 +952,7 @@ totalM: 10, totalC: 9, costOrStep: 1
 |  12  |   10   |   5    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    4    | 280  |    1    |
 |  13  |   10   |   9    |   L <- R   |  [1, 0, 1]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 308  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 152, count_close: 47, open+close: 199, AStar exe time : 0.118
+count_open: 152, count_close: 47, open+close: 199, AStar exe time : 0.1
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -970,7 +970,7 @@ count_open: 152, count_close: 47, open+close: 199, AStar exe time : 0.118
 |  10  |   10   |   4    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 274  |    0    |
 |  11  |   10   |   9    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 302  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 687, count_close: 575, open+close: 1262, UCS exe time: 9.042
+count_open: 687, count_close: 575, open+close: 1262, UCS exe time: 8.718
 
 ******************
 totalM: 11, totalC: 10, costOrStep: 0
@@ -1018,7 +1018,7 @@ totalM: 11, totalC: 10, costOrStep: 0
 |  38  |   11   |   8    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    | 114  |    0    |
 |  39  |   11   |   10   |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 117  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 226, count_close: 126, open+close: 352, AStar exe time : 0.293
+count_open: 226, count_close: 126, open+close: 352, AStar exe time : 0.27
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1064,7 +1064,7 @@ count_open: 226, count_close: 126, open+close: 352, AStar exe time : 0.293
 |  38  |   10   |   9    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    | 114  |    0    |
 |  39  |   11   |   10   |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 117  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1779, count_close: 1015, open+close: 2794, UCS exe time: 23.409
+count_open: 1779, count_close: 1015, open+close: 2794, UCS exe time: 23.752
 
 ******************
 totalM: 11, totalC: 10, costOrStep: 1
@@ -1088,7 +1088,7 @@ totalM: 11, totalC: 10, costOrStep: 1
 |  14  |   8    |   8    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    | 286  |    3    |
 |  15  |   11   |   10   |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 314  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 167, count_close: 64, open+close: 231, AStar exe time : 0.153
+count_open: 167, count_close: 64, open+close: 231, AStar exe time : 0.143
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1108,7 +1108,7 @@ count_open: 167, count_close: 64, open+close: 231, AStar exe time : 0.153
 |  12  |   11   |   5    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 324  |    0    |
 |  13  |   11   |   10   |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 352  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 899, count_close: 777, open+close: 1676, UCS exe time: 15.01
+count_open: 899, count_close: 777, open+close: 1676, UCS exe time: 14.888
 
 ******************
 totalM: 5, totalC: 3, costOrStep: 0
@@ -1130,7 +1130,7 @@ totalM: 5, totalC: 3, costOrStep: 0
 |  12  |   5    |   1    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  36  |    0    |
 |  13  |   5    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  39  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 91, count_close: 52, open+close: 143, AStar exe time : 0.086
+count_open: 91, count_close: 52, open+close: 143, AStar exe time : 0.093
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1150,7 +1150,7 @@ count_open: 91, count_close: 52, open+close: 143, AStar exe time : 0.086
 |  12  |   4    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  36  |    0    |
 |  13  |   5    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  39  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 238, count_close: 142, open+close: 380, UCS exe time: 0.905
+count_open: 238, count_close: 142, open+close: 380, UCS exe time: 0.909
 
 ******************
 totalM: 5, totalC: 3, costOrStep: 1
@@ -1163,7 +1163,7 @@ totalM: 5, totalC: 3, costOrStep: 1
 |  3   |   2    |   1    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    3    |    2    |  56  |    2    |
 |  4   |   5    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    |  84  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 49, count_close: 5, open+close: 54, AStar exe time : 0.013
+count_open: 49, count_close: 5, open+close: 54, AStar exe time : 0.011
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1173,7 +1173,7 @@ count_open: 49, count_close: 5, open+close: 54, AStar exe time : 0.013
 |  2   |   2    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    3    |    2    |  56  |    0    |
 |  3   |   5    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    |  84  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 115, count_close: 71, open+close: 186, UCS exe time: 0.299
+count_open: 115, count_close: 71, open+close: 186, UCS exe time: 0.284
 
 ******************
 totalM: 6, totalC: 4, costOrStep: 0
@@ -1199,7 +1199,7 @@ totalM: 6, totalC: 4, costOrStep: 0
 |  16  |   6    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  48  |    0    |
 |  17  |   6    |   4    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  51  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 121, count_close: 71, open+close: 192, AStar exe time : 0.158
+count_open: 121, count_close: 71, open+close: 192, AStar exe time : 0.137
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1223,7 +1223,7 @@ count_open: 121, count_close: 71, open+close: 192, AStar exe time : 0.158
 |  16  |   6    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  48  |    0    |
 |  17  |   6    |   4    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  51  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 428, count_close: 245, open+close: 673, UCS exe time: 2.544
+count_open: 428, count_close: 245, open+close: 673, UCS exe time: 2.595
 
 ******************
 totalM: 6, totalC: 4, costOrStep: 1
@@ -1238,7 +1238,7 @@ totalM: 6, totalC: 4, costOrStep: 1
 |  5   |   3    |   3    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 0]  |    3    |    1    | 112  |    1    |
 |  6   |   6    |   4    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 0]  |    0    |    0    | 140  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 95, count_close: 18, open+close: 113, AStar exe time : 0.06
+count_open: 95, count_close: 18, open+close: 113, AStar exe time : 0.054
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1250,7 +1250,7 @@ count_open: 95, count_close: 18, open+close: 113, AStar exe time : 0.06
 |  4   |   3    |   2    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 106  |    0    |
 |  5   |   6    |   4    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 134  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 236, count_close: 172, open+close: 408, UCS exe time: 1.451
+count_open: 236, count_close: 172, open+close: 408, UCS exe time: 1.354
 
 ******************
 totalM: 7, totalC: 5, costOrStep: 0
@@ -1280,7 +1280,7 @@ totalM: 7, totalC: 5, costOrStep: 0
 |  20  |   7    |   3    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  60  |    0    |
 |  21  |   7    |   5    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  63  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 155, count_close: 89, open+close: 244, AStar exe time : 0.229
+count_open: 155, count_close: 89, open+close: 244, AStar exe time : 0.19
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1308,7 +1308,7 @@ count_open: 155, count_close: 89, open+close: 244, AStar exe time : 0.229
 |  20  |   7    |   3    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  60  |    0    |
 |  21  |   7    |   5    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  63  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 732, count_close: 403, open+close: 1135, UCS exe time: 6.555
+count_open: 732, count_close: 403, open+close: 1135, UCS exe time: 6.431
 
 ******************
 totalM: 7, totalC: 5, costOrStep: 1
@@ -1324,7 +1324,7 @@ totalM: 7, totalC: 5, costOrStep: 1
 |  6   |   4    |   3    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    | 118  |    3    |
 |  7   |   7    |   5    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 146  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 96, count_close: 20, open+close: 116, AStar exe time : 0.073
+count_open: 96, count_close: 20, open+close: 116, AStar exe time : 0.074
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1338,7 +1338,7 @@ count_open: 96, count_close: 20, open+close: 116, AStar exe time : 0.073
 |  6   |   7    |   0    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 118  |    0    |
 |  7   |   7    |   5    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 146  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 362, count_close: 281, open+close: 643, UCS exe time: 3.318
+count_open: 362, count_close: 281, open+close: 643, UCS exe time: 3.428
 
 ******************
 totalM: 8, totalC: 6, costOrStep: 0
@@ -1372,7 +1372,7 @@ totalM: 8, totalC: 6, costOrStep: 0
 |  24  |   8    |   4    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  72  |    0    |
 |  25  |   8    |   6    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  75  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 185, count_close: 105, open+close: 290, AStar exe time : 0.248
+count_open: 185, count_close: 105, open+close: 290, AStar exe time : 0.267
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1404,7 +1404,7 @@ count_open: 185, count_close: 105, open+close: 290, AStar exe time : 0.248
 |  24  |   7    |   5    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  72  |    0    |
 |  25  |   8    |   6    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  75  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1067, count_close: 578, open+close: 1645, UCS exe time: 11.443
+count_open: 1067, count_close: 578, open+close: 1645, UCS exe time: 12.469
 
 ******************
 totalM: 8, totalC: 6, costOrStep: 1
@@ -1421,7 +1421,7 @@ totalM: 8, totalC: 6, costOrStep: 1
 |  7   |   5    |   4    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 168  |    2    |
 |  8   |   8    |   6    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 196  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 111, count_close: 22, open+close: 133, AStar exe time : 0.063
+count_open: 111, count_close: 22, open+close: 133, AStar exe time : 0.071
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1435,7 +1435,7 @@ count_open: 111, count_close: 22, open+close: 133, AStar exe time : 0.063
 |  6   |   8    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 168  |    0    |
 |  7   |   8    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 196  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 430, count_close: 340, open+close: 770, UCS exe time: 4.348
+count_open: 430, count_close: 340, open+close: 770, UCS exe time: 4.863
 
 ******************
 totalM: 9, totalC: 7, costOrStep: 0
@@ -1473,7 +1473,7 @@ totalM: 9, totalC: 7, costOrStep: 0
 |  28  |   9    |   5    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  84  |    0    |
 |  29  |   9    |   7    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  87  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 215, count_close: 121, open+close: 336, AStar exe time : 0.319
+count_open: 215, count_close: 121, open+close: 336, AStar exe time : 0.317
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1509,7 +1509,7 @@ count_open: 215, count_close: 121, open+close: 336, AStar exe time : 0.319
 |  28  |   7    |   7    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    2    |    0    |  84  |    0    |
 |  29  |   9    |   7    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  87  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1467, count_close: 790, open+close: 2257, UCS exe time: 21.232
+count_open: 1467, count_close: 790, open+close: 2257, UCS exe time: 22.236
 
 ******************
 totalM: 9, totalC: 7, costOrStep: 1
@@ -1528,7 +1528,7 @@ totalM: 9, totalC: 7, costOrStep: 1
 |  9   |   9    |   3    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    4    | 224  |    1    |
 |  10  |   9    |   7    |   L <- R   |  [1, 0, 1]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 252  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 147, count_close: 33, open+close: 180, AStar exe time : 0.115
+count_open: 147, count_close: 33, open+close: 180, AStar exe time : 0.143
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1544,7 +1544,7 @@ count_open: 147, count_close: 33, open+close: 180, AStar exe time : 0.115
 |  8   |   6    |   5    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 218  |    0    |
 |  9   |   9    |   7    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 246  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 641, count_close: 531, open+close: 1172, UCS exe time: 10.223
+count_open: 641, count_close: 531, open+close: 1172, UCS exe time: 11.093
 
 ******************
 totalM: 10, totalC: 8, costOrStep: 0
@@ -1586,7 +1586,7 @@ totalM: 10, totalC: 8, costOrStep: 0
 |  32  |   8    |   8    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    2    |    0    |  96  |    0    |
 |  33  |   10   |   8    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  99  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 244, count_close: 137, open+close: 381, AStar exe time : 0.401
+count_open: 244, count_close: 137, open+close: 381, AStar exe time : 0.481
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1626,7 +1626,7 @@ count_open: 244, count_close: 137, open+close: 381, AStar exe time : 0.401
 |  32  |   10   |   6    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  96  |    0    |
 |  33  |   10   |   8    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  99  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1972, count_close: 1048, open+close: 3020, UCS exe time: 35.959
+count_open: 1972, count_close: 1048, open+close: 3020, UCS exe time: 38.132
 
 ******************
 totalM: 10, totalC: 8, costOrStep: 1
@@ -1646,7 +1646,7 @@ totalM: 10, totalC: 8, costOrStep: 1
 |  10  |   7    |   6    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    | 230  |    3    |
 |  11  |   10   |   8    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 258  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 149, count_close: 37, open+close: 186, AStar exe time : 0.139
+count_open: 149, count_close: 37, open+close: 186, AStar exe time : 0.138
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1664,7 +1664,7 @@ count_open: 149, count_close: 37, open+close: 186, AStar exe time : 0.139
 |  10  |   7    |   6    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 230  |    0    |
 |  11  |   10   |   8    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 258  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 855, count_close: 726, open+close: 1581, UCS exe time: 18.887
+count_open: 855, count_close: 726, open+close: 1581, UCS exe time: 18.765
 
 ******************
 totalM: 11, totalC: 9, costOrStep: 0
@@ -1710,7 +1710,7 @@ totalM: 11, totalC: 9, costOrStep: 0
 |  36  |   9    |   9    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    2    |    0    | 108  |    0    |
 |  37  |   11   |   9    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 111  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 272, count_close: 153, open+close: 425, AStar exe time : 0.483
+count_open: 272, count_close: 153, open+close: 425, AStar exe time : 0.476
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1754,7 +1754,7 @@ count_open: 272, count_close: 153, open+close: 425, AStar exe time : 0.483
 |  36  |   9    |   9    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    2    |    0    | 108  |    0    |
 |  37  |   11   |   9    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 111  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 2477, count_close: 1315, open+close: 3792, UCS exe time: 54.533
+count_open: 2477, count_close: 1315, open+close: 3792, UCS exe time: 59.628
 
 ******************
 totalM: 11, totalC: 9, costOrStep: 1
@@ -1775,7 +1775,7 @@ totalM: 11, totalC: 9, costOrStep: 1
 |  11  |   8    |   7    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 280  |    2    |
 |  12  |   11   |   9    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 308  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 164, count_close: 39, open+close: 203, AStar exe time : 0.148
+count_open: 164, count_close: 39, open+close: 203, AStar exe time : 0.151
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1793,7 +1793,7 @@ count_open: 164, count_close: 39, open+close: 203, AStar exe time : 0.148
 |  10  |   8    |   7    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    3    |    2    | 280  |    0    |
 |  11  |   11   |   9    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 2, 1]  |    0    |    0    | 308  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 928, count_close: 783, open+close: 1711, UCS exe time: 21.65
+count_open: 928, count_close: 783, open+close: 1711, UCS exe time: 22.077
 
 ******************
 totalM: 12, totalC: 10, costOrStep: 0
@@ -1843,7 +1843,7 @@ totalM: 12, totalC: 10, costOrStep: 0
 |  40  |   10   |   10   |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    2    |    0    | 120  |    0    |
 |  41  |   12   |   10   |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 123  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 300, count_close: 169, open+close: 469, AStar exe time : 0.589
+count_open: 300, count_close: 169, open+close: 469, AStar exe time : 0.638
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1891,7 +1891,7 @@ count_open: 300, count_close: 169, open+close: 469, AStar exe time : 0.589
 |  40  |   11   |   9    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    1    |    1    | 120  |    0    |
 |  41  |   12   |   10   |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    | 123  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 3092, count_close: 1633, open+close: 4725, UCS exe time: 84.922
+count_open: 3092, count_close: 1633, open+close: 4725, UCS exe time: 86.395
 
 ******************
 totalM: 12, totalC: 10, costOrStep: 1
@@ -1914,7 +1914,7 @@ totalM: 12, totalC: 10, costOrStep: 1
 |  13  |   12   |   6    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    0    |    4    | 336  |    1    |
 |  14  |   12   |   10   |   L <- R   |  [1, 0, 1]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 364  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 200, count_close: 50, open+close: 250, AStar exe time : 0.264
+count_open: 200, count_close: 50, open+close: 250, AStar exe time : 0.235
 
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
 | step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
@@ -1934,214 +1934,5 @@ count_open: 200, count_close: 50, open+close: 250, AStar exe time : 0.264
 |  12  |   12   |   5    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 330  |    0    |
 |  13  |   12   |   10   |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 358  |    0    |
 +------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 1223, count_close: 1063, open+close: 2286, UCS exe time: 39.978
+count_open: 1223, count_close: 1063, open+close: 2286, UCS exe time: 43.899
 
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   0    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   3    |   3    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 3, 0]  |    0    |    0    |  34  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 47, count_close: 28, open+close: 75+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    3    |  0   |    9    |
-|  1   |   2    |   0    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    4    |    3    |  3   |    9    |
-|  2   |   1    |   0    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    5    |    3    |  6   |    6    |
-|  3   |   3    |   3    |   L <- R   |  [1, 2, 0]  |   L <- R   |  [1, 0, 3]  |    3    |    0    |  34  |    8    |
-|  4   |   2    |   2    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 1, 0]  |    4    |    1    |  62  |    0    |
-|  5   |   6    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 3, 0]  |    0    |    0    |  90  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 218, count_close: 156, open+close: 374+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    6    |  0   |    12   |
-|  1   |   0    |   5    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    6    |    1    |  28  |    12   |
-|  2   |   0    |   4    |   L (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    6    |    2    |  53  |    5    |
-|  3   |   3    |   3    |   L -> R   |  [1, 0, 1]  |   L <- R   |  [1, 3, 0]  |    3    |    3    |  81  |    7    |
-|  4   |   2    |   2    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 1]  |    4    |    4    | 106  |    5    |
-|  5   |   6    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 3, 0]  |    0    |    3    | 134  |    8    |
-|  6   |   6    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 162  |    0    |
-|  7   |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 190  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 218, count_close: 171, open+close: 389+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    6    |  0   |    12   |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    5    |    5    |  3   |    12   |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    5    |  6   |    9    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    6    |    3    |  9   |    11   |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    6    |    4    |  12  |    8    |
-|  5   |   0    |   4    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    6    |    2    |  15  |    10   |
-|  6   |   3    |   3    |   L -> R   |  [1, 0, 1]  |   L <- R   |  [1, 3, 0]  |    3    |    3    |  43  |    7    |
-|  7   |   2    |   2    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 1]  |    4    |    4    |  68  |    5    |
-|  8   |   6    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 3, 0]  |    0    |    3    |  96  |    8    |
-|  9   |   6    |   2    |   L -> R   |  [1, 0, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    4    |  99  |    2    |
-|  10  |   6    |   4    |   L <- R   |  [1, 0, 2]  |   L (X)    |  [0, 0, 0]  |    0    |    2    | 102  |    4    |
-|  11  |   6    |   3    |   L -> R   |  [1, 0, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    3    | 105  |    1    |
-|  12  |   6    |   5    |   L <- R   |  [1, 0, 2]  |   L (X)    |  [0, 0, 0]  |    0    |    1    | 108  |    3    |
-|  13  |   6    |   4    |   L -> R   |  [1, 0, 1]  |   L (X)    |  [0, 0, 0]  |    0    |    2    | 111  |    0    |
-|  14  |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L (X)    |  [0, 0, 0]  |    0    |    0    | 114  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 385, count_close: 259, open+close: 644+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    6    |  0   |    12   |
-|  1   |   0    |   5    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    6    |    1    |  28  |    12   |
-|  2   |   0    |   4    |   L (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    6    |    2    |  53  |    5    |
-|  3   |   3    |   3    |   L -> R   |  [1, 0, 1]  |   L <- R   |  [1, 3, 0]  |    3    |    3    |  81  |    7    |
-|  4   |   2    |   2    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 1]  |    4    |    4    | 106  |    5    |
-|  5   |   6    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 3, 0]  |    0    |    3    | 134  |    8    |
-|  6   |   6    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 162  |    0    |
-|  7   |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 190  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 218, count_close: 171, open+close: 389+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    6    |  0   |    12   |
-|  1   |   0    |   5    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    6    |    1    |  28  |    12   |
-|  2   |   0    |   4    |   L (X)    |  [0, 0, 0]  |   L -> R   |  [1, 0, 1]  |    6    |    2    |  53  |    5    |
-|  3   |   3    |   3    |   L -> R   |  [1, 0, 1]  |   L <- R   |  [1, 3, 0]  |    3    |    3    |  81  |    7    |
-|  4   |   2    |   2    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 1]  |    4    |    4    | 106  |    5    |
-|  5   |   6    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 3, 0]  |    0    |    3    | 134  |    8    |
-|  6   |   6    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 162  |    0    |
-|  7   |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 190  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 218, count_close: 171, open+close: 389+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    6    |  0   |    12   |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    5    |    5    |  3   |    12   |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    6    |    5    |  6   |    9    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    6    |    3    |  9   |    11   |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    6    |    4    |  12  |    8    |
-|  5   |   0    |   4    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    6    |    2    |  15  |    10   |
-|  6   |   3    |   3    |   L -> R   |  [1, 0, 1]  |   L <- R   |  [1, 3, 0]  |    3    |    3    |  43  |    7    |
-|  7   |   2    |   2    |   R (X)    |  [0, 0, 0]  |   L -> R   |  [1, 1, 1]  |    4    |    4    |  68  |    5    |
-|  8   |   6    |   3    |   L <- R   |  [1, 1, 1]  |   L <- R   |  [1, 3, 0]  |    0    |    3    |  96  |    8    |
-|  9   |   6    |   1    |   L -> R   |  [1, 0, 1]  |   L -> R   |  [1, 0, 1]  |    0    |    5    | 124  |    0    |
-|  10  |   6    |   6    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 0, 3]  |    0    |    0    | 152  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 461, count_close: 409, open+close: 870+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   0    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   3    |   3    |   L <- R   |  [1, 0, 2]  |   L <- R   |  [1, 3, 0]  |    0    |    0    |  34  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 47, count_close: 28, open+close: 75+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-| step | left m | left c | boatA DIRE | boatA [m c] | boatB DIRE | boatB [m c] | right m | right c | cost | AStar_h |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-|  0   |   0    |   0    |   R (X)    |  [0, 0, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    3    |  0   |    6    |
-|  1   |   1    |   1    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  3   |    6    |
-|  2   |   0    |   1    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    3    |    2    |  6   |    3    |
-|  3   |   0    |   3    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    3    |    0    |  9   |    5    |
-|  4   |   0    |   2    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    3    |    1    |  12  |    2    |
-|  5   |   2    |   2    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  15  |    4    |
-|  6   |   1    |   1    |   L -> R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    2    |    2    |  18  |    2    |
-|  7   |   3    |   1    |   L <- R   |  [1, 2, 0]  |   R (X)    |  [0, 0, 0]  |    0    |    2    |  21  |    4    |
-|  8   |   3    |   0    |   L -> R   |  [1, 0, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    3    |  24  |    1    |
-|  9   |   3    |   2    |   L <- R   |  [1, 0, 2]  |   R (X)    |  [0, 0, 0]  |    0    |    1    |  27  |    3    |
-|  10  |   2    |   2    |   L -> R   |  [1, 1, 0]  |   R (X)    |  [0, 0, 0]  |    1    |    1    |  30  |    0    |
-|  11  |   3    |   3    |   L <- R   |  [1, 1, 1]  |   R (X)    |  [0, 0, 0]  |    0    |    0    |  33  |    0    |
-+------+--------+--------+------------+-------------+------------+-------------+---------+---------+------+---------+
-count_open: 86, count_close: 53, open+close: 139
