@@ -1,2 +1,18 @@
 
 count_open: 482, count_close: 275, open+close: 757
+count_open: 68, count_close: 64, open+close: 132
+count_open: 66, count_close: 52, open+close: 118
+count_open: 67, count_close: 59, open+close: 126
+count_open: 68, count_close: 64, open+close: 132
+count_open: 68, count_close: 64, open+close: 132
+count_open: 67, count_close: 56, open+close: 123
+count_open: 68, count_close: 64, open+close: 132
+count_open: 68, count_close: 64, open+close: 132
+count_open: 73, count_close: 61, open+close: 134
+count_open: 67, count_close: 63, open+close: 130
+count_open: 68, count_close: 64, open+close: 132
+count_open: 68, count_close: 64, open+close: 132
+count_open: 73, count_close: 61, open+close: 134
+count_open: 66, count_close: 52, open+close: 118
+count_open: 73, count_close: 61, open+close: 134
+count_open: 68, count_close: 64, open+close: 132
